@@ -1,0 +1,31 @@
+# Written by <some user> on Tue May 17 18:14:13 BST 2011
+[groups]
+@fist = 
+@hand = 
+@claw = 
+
+[/]
+@fist = rw
+
+[/someProject]
+@hand = rw
+
+[/someProject/trunk]
+@hand = rw
+@claw = rw
+
+[/someProject/branches]
+@claw = rw
+
+[/someProject/branches/branchX]
+@hand = r
+@claw = rw
+
+[/someProject/branches/branchY]
+@hand = r
+@claw = rw
+
+[/someProject/tags]
+thumb = rw
+@hand = r
+@claw = r

@@ -1,0 +1,46 @@
+# Groups referred to in other sections must be listed here, but group membership is obtained from Crowd.
+[groups]
+
+# svn admins
+fist =
+# team svn admins
+hand =
+
+# dev team
+claw =
+
+# Project SVN Admins
+[/]
+@fist = rw
+
+# Team Admins can rw the project, create branches and tags
+[/someProject]  # This comment tests that comments can be anywhere
+@hand = rw    # This comment tests that comments can be anywhere
+               # This comment tests that comments can be anywhere
+
+# Project devs can commit code under the trunk
+[/someProject/trunk]
+@hand = rw
+@claw = rw
+
+# admins might want to limit permissions to branches
+[/someProject/branches]
+@claw = rw
+
+# Project devs can commit code under the branchX
+[/someProject/branches/branchX]
+@hand = r
+@claw = rw
+
+# Project devs can commit code under the branchY
+[/someProject/branches/branchY]
+@hand = r
+@claw = rw
+
+# Project devs can read from tags
+# Bamboo technical user can create tags
+[/someProject/tags]
+thumb = rw
+@hand = r
+@claw = r
+
